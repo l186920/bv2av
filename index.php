@@ -126,7 +126,7 @@ const s = [11, 10, 3, 8, 4, 6];
 const xor = 177451812;
 const add = 8728348608;
 
-const av2bv = (av) => {
+var av2bv = (av) => {
     let num = NaN;
     if (Object.prototype.toString.call(av) === '[object Number]') {
         num = av;
@@ -151,7 +151,7 @@ const av2bv = (av) => {
     return result.join('');
 };
 
-const bv2av = (bv) => {
+var bv2av = (bv) => {
     let str = '';
     if (bv.length === 12) {
         str = bv;
@@ -178,7 +178,7 @@ const bv2av = (bv) => {
 };
 
 
-const exchange = () => {
+var exchange = () => {
 	var x = document.getElementById('x').value;
 	if(x.substring(0,2).toLowerCase()=='bv'){
         document.getElementById('x').value = `${bv2av(x)}`;
